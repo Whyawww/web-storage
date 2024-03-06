@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Nusantara</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Perpustakaan Nusantara</h1>
+    
+    <div class="form-container">
+      <label for="judul">Judul:</label>
+      <input type="text" id="judul" placeholder="Enter judul buku">
+
+      <label for="penulis">Penulis:</label>
+      <input type="text" id="penulis" placeholder="Enter penulis nama">
+
+      <label for="status">Status:</label>
+      <select id="status">
+        <option value="belum dibaca">Belum dibaca</option>
+        <option value="dibaca">Selesai dibaca</option>
+      </select>
+
+      <button onclick="addBook()">Tambahkan Buku</button>
+    </div>
+
+    <div class="cari-container">
+      <label for="cari">Cari:</label>
+      <input type="text" id="cari" placeholder="Cari Judul Buku" oninput="searchBooks()">
+    </div>
+
+    <div class="rak-buku">
+      <div class="rak" id="rak-belum-dibaca">
+        <h2>Belum selesai dibaca</h2>
+        <ul id="list-belum-dibaca"></ul>
+      </div>
+
+      <div class="rak" id="rak-selesai-dibaca">
+        <h2>Selesai Dibaca</h2>
+        <ul id="list-selesai-dibaca"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
